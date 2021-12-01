@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+
+  <head>
+    <title> Slider </title>
+    <meta charset=utf-8>
+    <link rel="stylesheet" href="./carousel/style.css">
+    <link rel="stylesheet" href="./style.css">
+  </head>
+
+  <body>
+    <div id="slider">
+      <div class="divImg" id="img-1"><img class="img"></div>
+      <div class="divImg" id="img-2"><img class="img"></div>
+      <div class="divImg" id="img-3"><img class="img"></div>
+      <div class="divImg" id="img-4"><img class="img"></div>
+    </div>
+
+
+    <a class="button" id="button-esq"> &lt; </a>
+    <a class="button" id="button-dir"> &gt; </a>  
+
+    <script type="text/javascript" src="./carousel/script.js"></script>
+    <script type="text/javascript">
+        
+        carousel = new Carousel("slider");
+
+        document.getElementById('button-dir').onclick = function(e) {
+          e.preventDefault();
+          carousel.slideCarouselRightToLeft(delay=1000);
+        };
+
+        document.getElementById('button-esq').onclick = function(e) {
+          e.preventDefault();
+          carousel.slideCarouselLeftToRight(delay=1000);
+        };
+
+        carousel.slide(delay=5000);
+
+    </script>
+  </body>
+</html>

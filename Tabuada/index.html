@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<!-- 2 - Crie um algoritmo que solicite a entrada de um número, e exiba a tabuada de 0 a 10 de acordo com o número -->
+	<title> Exercício Dois </title>
+	<meta charset="utf-8">
+	<link rel="preconnect" href="https://fonts.gstatic.com">
+	<link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
+</head>
+<body>
+	<section id="container">
+		<form action="resultado.php" method="POST">
+			<div class="input">
+				<h4>Digite um número:</h4> <input type="number" name="num">
+				<input type="submit" value="ver tabuada">
+			</div>
+		</form>
+	</section>
+	
+	
+	<style>
+		* {
+			box-sizing: border-box;
+			-webkit-box-sizing: border-box;
+		}
+		html, body {
+			width: 100vw;
+			height: 100vh;
+			background-color: whitesmoke;
+			overflow: hidden;
+			font-family: 'Poppins', monospace;
+		}
+		#container {
+			transform: translate(-50%, -50%);
+			position: relative;
+			left: 50%;
+			top: 50%;
+			width: 500px;
+			height: 500px;
+			padding: 40px;
+			background-color: lightgray;
+			border-radius: 5px;
+			box-shadow: 0 0 10px black;
+			display: flex;
+			justify-content: center;
+			align-items: center;
+		}
+		div * {
+			display: inline;
+			margin: 40px 0;
+		}
+		input[type=number] {
+			width: 250px;
+			height: 30px;
+		}
+		input[type=submit] {
+			width: 100%;
+			height: 50px;
+			cursor: pointer;
+		}
+	</style>
+</body>
+
+</html>

@@ -1,0 +1,113 @@
+html {
+	font-size: 4.3px;
+}
+
+body {
+	font-family: serif;
+	font-size: 5rem;
+	margin: 0;
+	overflow-x: hidden;
+}
+
+header {
+	width: 100vw;
+	height: 300px;
+}
+
+#div-header {
+	width: 100%;
+	height: 70%;
+}
+
+#logo {
+	width: 180px;
+	height: 180px;
+}
+
+#logo  img {
+	width: 100%;
+	height: 100%;
+}
+
+#titulo {
+	font-family: 'Bebas Neue', sans-serif;
+	font-size: 10rem;
+	letter-spacing: 4;
+	word-spacing: 2;
+	text-decoration: underline;
+	position: absolute; 
+	top: -5; 
+	right: 120;
+}
+
+#menu {
+	position: absolute;
+	top: 0;
+	right: -500px;
+	height: 100%;
+}
+
+.overlay {
+	height: 100vh;
+	width: 100vw;
+	position: fixed;
+	top: 0;
+	left: 0;
+	background-color: rgba(0,0,0,.8);
+	display: none;
+	opacity: 0;
+	transition: all linear 6s;
+}
+
+
+.menu-open {
+	background: #900;
+	color: #fff;
+	font-size: 20px;
+	text-decoration: none;
+	padding: 10px 20px;
+	margin: 20px;
+	display: inline-block;
+	text-transform: uppercase;
+}
+
+.menu a.menu-close {
+	padding: 8px 0 4px 23px;
+	color: #6B6B6B;
+	display: block;
+	margin: -30px 0 10px -20px;
+	font-size: 35px;
+	text-decoration: none;
+}
+
+.menu {
+	display: block;
+	transition: all linear .5s;
+	position: absolute;
+	background: rgba(0,0,0,.95);
+	padding: 40px 0 0 40px;
+	height: 100%;
+	width: 100%;
+	z-index: 2;
+	width: 650px;
+	overflow: hidden;
+}
+
+.menu ul {
+	list-style-type: none;
+	padding: 0;
+	margin: 0;
+	overflow-y: auto;
+	width: 500px;
+	height: 95%;
+}
+
+.menu ul li a {
+	display: block;
+	border-bottom: 1px solid #131313;
+	padding: 6px 4px 6px 4px;
+	color: #989898;
+	transition: .3s;
+	text-decoration: none;
+}
+

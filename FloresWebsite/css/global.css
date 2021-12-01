@@ -1,0 +1,78 @@
+:root {
+    /* ================== family  ================== */
+    --font-poppins: 'Poppins', sans-serif;
+    --font-righteous: 'Righteous', 'Poppins', sans-serif;
+
+    /* ================== color  ================== */
+    --primary-color: 306;
+    --secondary-color: 206;
+
+    /* ================== font size  ================== */
+    --h1-font-size: 2.4rem;
+    --h2-font-size: 2.2rem;
+    --h3-font-size: 2rem;
+
+    --big-font-size: 1.4rem;
+    --normal-font-size: 1rem;
+    --small-font-size: 0.75rem;
+
+    /* ================== font weight  ================== */
+    --font-light: 200;
+    --font-normal: 400;
+    --font-semi-bold: 600;
+
+    /* ================== height  ================== */
+    --top-height: 8rem;
+    --nav-height: 2.8rem;
+
+    /* ================== icon  ================== */
+    --big-icon: 3rem;
+    --normal-icon: 2.4rem;
+    --small-icon: 2rem;
+
+    /* ================== img  ================== */
+    --img-normal-scale: 0.5;
+    --img-hover-scale: 0.62;
+
+}
+@media (max-width: 879px) {
+    :root {
+        /* ================== height  ================== */
+        --top-height: 6rem;
+    }
+}
+@media (min-width: 1300px) {
+    :root {
+        /* ================== color  ================== */
+        --primary-color: 306;
+        --secondary-color: 206;
+
+        /* ================== font size  ================== */
+        --h1-font-size: 3rem;
+        --h2-font-size: 2.8rem;
+        --h3-font-size: 2.6rem;
+/* 
+        --big-font-size: 2rem;
+        --normal-font-size: 1.6rem;
+        --small-font-size: 1.35rem; */
+
+        /* ================== font weight  ================== */
+        --font-light: 200;
+        --font-normal: 400;
+        --font-semi-bold: 600;
+    }
+}
+
+/* ================== reset  ================== */
+* {
+    -webkit-box-sizing: border-box;
+            box-sizing: border-box;
+    appearance: none;
+    margin: 0;
+    padding: 0;
+    font-family: var(--font-poppins), sans-serif;
+}
+
+body {
+    overflow-x: hidden;
+}

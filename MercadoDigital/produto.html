@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title></title>
+
+    <!-- bootstrap -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous" defer></script>
+</head>
+<body>
+    <header>
+        <nav>
+            <h1 class="h1 display-1">Mercado Digital</h1>
+        </nav>
+    </header>
+
+    <main> 
+        <section class="produto container-fluid">
+            <div class="card">
+                <div>
+                    <h5>Básico</h5>
+                </div>
+
+                <div>
+                    <span class="description">Título</span>
+                    <input type="text" class="form-control" value="Nome do Produto">
+                </div>
+
+                <div>
+                    <span class="description">Descrição</span>
+                    <textarea rows="10" class="form-control" style="width: 100%; padding: 1rem;">Descrição deste produto.</textarea>
+                </div>
+            </div>
+
+            <div class="card">
+                <div>
+                    <h5 style="float: left;">Media</h5>
+                    <a href="#" style="float: right;">+adicionar imagem</a>
+                </div>
+
+                <div class="produto-imagens">
+                    <img 
+                        src="https://static3.tcdn.com.br/img/img_prod/577735/calca_vermelha_com_camiseta_azul_18947409_1_20210716145109.jpg" 
+                        style="float: left;"
+                    />
+
+                    <img 
+                        src="https://static3.tcdn.com.br/img/img_prod/577735/calca_vermelha_com_camiseta_azul_18947409_1_20210716145109.jpg" 
+                        style="height: 9.4rem; width: 9.4rem;"
+                    />
+                        
+                    <img 
+                        src="https://static3.tcdn.com.br/img/img_prod/577735/calca_vermelha_com_camiseta_azul_18947409_1_20210716145109.jpg" 
+                        style="height: 9.4rem; width: 9.4rem;"    
+                    />
+                    
+                    <img 
+                        src="https://static3.tcdn.com.br/img/img_prod/577735/calca_vermelha_com_camiseta_azul_18947409_1_20210716145109.jpg" 
+                        style="height: 9.4rem; width: 9.4rem; clear: left;"
+                    />
+                    
+                    <img 
+                        src="https://static3.tcdn.com.br/img/img_prod/577735/calca_vermelha_com_camiseta_azul_18947409_1_20210716145109.jpg" 
+                        style="height: 9.4rem; width: 9.4rem;"    
+                    />
+                </div>
+
+                <div>
+                    <a href="#">Mostrar mais imagens</a>
+                </div>
+            </div>
+
+            <div class="card">
+                <div>
+                    <h5>Tags</h5>
+                </div>
+
+                <div>
+                    <div class="options">
+                        <h6>Cores</h6>
+    
+                        <span>vermelho</span>
+                        <span>azul</span>
+
+                        <a href="#" style="margin-left: 10px;">+adicionar valor</a>
+                    </div>
+                </div>
+
+                <div>
+                    <a href="#">+ Outra tag</a>
+                </div>
+            </div>
+
+            <div class="card">
+                <div>
+                    <h5 style="float: left;">Variantes</h5>
+
+                    <a href="#" style="float: right;">+adicionar variante</a>
+                </div>
+
+                <section class="container variants" style="margin-top: 2rem;">
+                    <div class="row" style="font-weight: 600; margin-bottom: 1.4rem;">
+                        <div class="col produto-check">
+                            <input class="form-check-input" type="checkbox" disabled>
+                        </div>
+
+                        <div class="col">
+                            <span>variante</span>
+                        </div>
+
+                        <div class="col">
+                            <span>preço</span>
+                        </div>
+
+                        <div class="col">
+                            <span>quantidade</span>
+                        </div>
+
+                        <div class="col">
+                        </div>
+                    </div>
+
+                    <div class="row">
+                        <div class="col produto-check">
+                            <input class="form-check-input" type="checkbox">
+                        </div>
+
+                        <div class="col">
+                            <img 
+                                src="https://static3.tcdn.com.br/img/img_prod/577735/calca_vermelha_com_camiseta_azul_18947409_1_20210716145109.jpg"
+                                style="float: left; width: 50px; height: 50px; border-radius: 8px; border: 1px solid black; margin-right: 5px;"
+                            />
+
+                            <h6>vermelho</h6>
+                        </div>
+
+                        <div class="col">
+                            <div class="input-group">
+                                <span class="input-group-text">R$</span>
+                                <input class="form-control" type="text" value="155.90">
+                            </div>
+                        </div>
+
+                        <div class="col">
+                            <input class="form-control" type="number" value="43">
+                        </div>
+
+                        <div class="col">
+                            <div class="btn-group">
+                                <button class="btn btn-primary">Editar</button>
+                                <button class="btn btn-danger">Excluir</button>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+            </div>
+        </section>
+    </main>
+
+    <style>
+        :root{
+            --nav-height: 8rem;
+            --primary-color: hsl(210, 30%, 20%);
+        }
+
+        header nav{
+            position: relative;
+            height: var(--nav-height);
+            background-color: var(--primary-color);
+        }
+
+        header h1{
+            color: #fff;
+            position: absolute;
+            left: 2rem;
+            top: 50%;
+            transform: translateY(-50%);
+        }
+
+        section.produto{
+            width: 90%;
+            margin: 2rem auto;
+        }
+
+        section.produto .card{
+            margin: 2rem 0;
+            padding: 0.8rem;
+        }
+
+        section.produto .card > div{
+            display: block;
+            margin: 0.4rem 1rem;
+        }
+
+        section.produto .card > div .description{
+            display: block;
+        }
+
+        section.produto .card .produto-imagens img{
+            width: 19rem; 
+            height: 19rem; 
+            border-radius: 10px;
+            border: 1px solid black;
+            margin: 5px;
+            cursor: pointer;
+            float: left;
+        }
+
+        section.produto .card .options h6{
+            color: var(--primary-color);
+        }
+
+        section.produto .card .options span{
+            padding: 3px 12px;
+            color: #fff;
+            background-color: var(--primary-color);
+            cursor: pointer;
+            border-radius: 15px;
+        }
+
+        section.produto .card .options span::before{
+            content: "- ";
+        }
+
+        section.produto section.variants .row{
+            margin: 10px 0;
+            display: grid;
+            grid-template-columns: auto 1fr 1fr 1fr 1fr;
+        }
+
+        section.produto section.variants .row input,
+        section.produto section.variants .row span{
+            height: 1.7rem;
+        }
+
+        section.produto section.variants .row .produto-check input{
+            height: 1rem;
+            width: 1rem;
+        }
+        
+        section.produto section.variants .row .col{
+            display: flex;
+            align-items: center;
+        }
+    </style>
+</body>
+</html>

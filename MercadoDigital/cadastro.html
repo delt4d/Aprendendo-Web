@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title></title>
+
+    <!-- bootstrap -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous" defer></script>
+</head>
+<body>
+    <header>
+        <nav>
+            <h1 class="h1 display-1">Mercado Digital</h1>
+        </nav>
+    </header>
+
+    <main>
+        <form class="container-xl" action="login.html" method="GET">
+            <fieldset style="margin-left: 2rem;">
+                <legend style="margin-left: -2rem; font-weight: bold;">Criar Conta</legend>
+
+                <fieldset class="w-50">
+                    <legend>informações pessoais</legend>
+
+                    <div class="row">
+                        <div class="col">
+                            <label for="nome">Nome</label>
+                            <input id="nome" type="text" class="form-control" placeholder="Digite o seu nome" aria-label="primeiro nome" required />
+                        </div>
+                        
+                        <div class="col">
+                            <label for="sobrenome">Sobrenome</label>
+                            <input id="sobrenome" type="text" class="form-control" placeholder="Digite o seu sobrenome" aria-label="sobrenome" required />
+                        </div>
+                    </div>
+                </fieldset>
+
+                <fieldset class="w-75">
+                    <legend>conta</legend>
+
+                    <div>                        
+                        <label for="usuario">Usuário</label>
+                        <input id="usuario" type="text" class="form-control" placeholder="Digite um nome de usuário" required />
+                    </div>
+
+                    <div>
+                        <label for="email">Email</label>
+
+                        <div class="input-group mb-3">
+                            <span class="input-group-text" id="basic-addon1">@</span>
+                            <input id="email" type="email" class="form-control" placeholder="Digite o seu email" required />
+                        </div>
+                    </div>
+
+                    <div>
+                        <label for="senha">Senha</label>
+                        <input id="senha" type="password" class="form-control" placeholder="Crie uma senha" required />
+                    </div>
+                    
+                    <div>
+                        <label for="tipo">Quero entrar como</label>
+                        <select id="tipo" class="form-select" required>
+                            <option value="comprador" selected>Comprador</option>
+                            <option value="vendedor">Vendedor</option>
+                        </select>
+                    </div>
+                </fieldset>
+
+                <div>
+                    <button id="button-submit" type="submit" class="btn btn-primary">Cadastrar</button>
+                    <a id="button-link" href="login.html" class="btn btn-link">Já tem uma conta?</a>
+                </div>
+            </fieldset>
+        </form>
+    </main>
+
+    <style>
+        :root{
+            --nav-height: 8rem;
+            --primary-color: hsl(210, 30%, 20%);
+        }
+
+        header nav{
+            position: relative;
+            height: var(--nav-height);
+            background-color: var(--primary-color);
+        }
+
+        header h1{
+            color: #fff;
+            position: absolute;
+            left: 2rem;
+            top: 50%;
+            transform: translateY(-50%); 
+        }
+
+        form{
+            margin-top: 2.6rem;
+        }
+
+        fieldset{
+            margin-bottom: 2.2rem;
+        }
+
+        fieldset > div{
+            margin-bottom: 1rem;
+        }
+
+        legend{
+            text-transform: capitalize;
+            color: var(--primary-color);
+        }
+
+        label{
+            color: var(--primary-color);
+        }
+
+        #button-submit{
+            border-color: var(--primary-color);
+            background-color: var(--primary-color);
+        }
+    </style>
+</body>
+</html>

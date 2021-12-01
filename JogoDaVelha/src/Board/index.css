@@ -1,0 +1,33 @@
+/* O tabuleiro usa um truque para virar um quadrado responsivo */
+.Board-container{
+    /* a seguir estilos para a responsividade e forma */
+    position: relative;
+    box-sizing: content-box; 
+    width: 30%; /* widht: 30% */
+    height: 0; /* aqui está a mágica para um quadrado responsivo... */
+    padding-bottom: 30%; /* ...e aqui */
+}
+
+/* 
+* É necessário por causa do padding do pai, que impede os items de crescerem,
+* e ao mesmo tempo de se alinharem corretamente.
+*/
+.Board {
+    /* a seguir estilos para ocupar todo o espaço disponível */
+    position: absolute; 
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    /* estilo para os botões filhos (casas do tabuleiro) */
+    display: grid;
+    grid-template: 1fr 1fr 1fr / 1fr 1fr 1fr;
+}
+
+.Board--square {
+    transform: scale(0.9);
+}
+
+.Board--square:hover {
+    background-color: #444;
+}

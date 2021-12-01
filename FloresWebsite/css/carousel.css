@@ -1,0 +1,25 @@
+/* ================== carousel  ================== */
+#carousel {
+    position: relative;
+    width: 100vw;
+    background-color: black;
+    cursor: pointer;
+}
+
+#carousel .item {
+    height: 25rem;
+}
+
+.carousel__dotsContainer {
+    position: absolute;
+    bottom: 0.3rem;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.carousel__dot span {
+    box-shadow: 0 0 0 2px #fff; /* se parece uma borda */
+}
+.carousel__nav {
+
+}

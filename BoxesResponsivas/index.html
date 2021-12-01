@@ -1,0 +1,278 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>Homepage</title>
+</head>
+<body>
+	<header>
+		<div id="header--title">
+			<h1>Logo</h1>
+		</div>
+
+		<div id="header--search">
+			<ul>
+				<li><a href="#">cadastrar produtos</a></li>
+				<li><a href="#">exibir produtos</a></li>
+			</ul>
+		</div>
+	</header>
+
+	<main>
+		<section class="main--containerProdutos" id="main--containerProdutos"></section>
+	</main>
+
+	<footer></footer>
+
+
+
+
+	<style type="text/css">
+		* {
+			margin: 0;
+			padding: 0;
+			-webkit-box-sizing:  border-box;
+					box-sizing: border-box;
+		}
+
+		:root {
+			font-size: 13.5px;
+		}
+
+		@media screen and (min-width: 800px) {
+			:root {
+				font-size: 16px;
+			}
+		}
+
+
+		@media screen and (min-width: 2500px) {
+			:root {
+				font-size: 28px;
+			}
+		}
+
+		html,
+		body {
+			height: 100vh;
+		}
+
+		header {
+			position: relative;
+			height: 45px;
+			background: hsl(0,0%,96%);
+		}
+
+		#header--title {
+			display: inline-block;
+			height: 100%;
+			display: flex;
+			align-items: center;
+		}
+
+		#header--title h1 {
+			text-transform: uppercase;
+			margin-left: 20px;
+		}
+
+		#header--search {
+			transform:  translateY(-50%);
+			position: absolute;
+			top: 50%;
+			right: 20px;
+			display: block;
+		}
+
+		#header--search ul {
+			list-style-type: none;
+		}
+
+		#header--search li {
+			display: inline;
+			margin-left: 10px;
+		}
+
+		#header--search a {
+			width: 100%;
+			height: 100%;
+			color: #000;
+			text-decoration: none;
+			cursor: pointer;
+		}
+
+		@media screen and (max-width: 799px) {
+			#header--search li:last-child {
+				border-radius: 2px;
+				padding: 5px;
+				background: #0003;
+			}
+		}
+
+		@media screen and (min-width: 800px) {
+			header {
+				height: 80px;
+			}
+			#header--title {
+				margin-left: 40px;
+			}
+			#header--search {
+				right: 40px;
+			}
+			#header--search li {
+				margin-left: 50px;
+			}
+		}
+
+
+		@media screen and (min-width: 2500px) {
+			header {
+				height: 140px;
+			}
+			#header--title {
+				margin-left: 100px;
+			}
+			#header--search {
+				right: 100px;
+			}
+			#header--search li {
+				margin-left: 100px;
+			}
+		}
+
+
+		.main--containerProdutos {
+			padding-top: 80px;
+		}
+
+		.main--produtoBox {
+			width: 100%;
+			height: 400px;
+			display: block;
+			transform: scale(0.8);
+			padding: 20px;
+			display: flex;
+			flex-flow: column nowrap;
+			border-radius: 2.4px;
+			box-shadow: 0 0 10px 2px lightgray;
+		}
+
+
+		.main--produtoBox h1 {
+			text-align: center;
+			text-transform: uppercase;
+			font-size: 30px;
+			margin: 10px 30px;
+		}
+
+		.main--produtoBox p {
+			font-size: 22px;
+			text-align: justify;
+			overflow: hidden;
+			text-overflow: ellipsis;
+			display: -webkit-box;
+			-webkit-line-clamp: 8;
+			-webkit-box-orient: vertical;
+		}
+
+		.main--produtoBox button {
+			margin-top: auto;
+			height: 50px;
+			font-size: 16px;
+			color: white;
+			background: hsl(206,100%,25%);
+			border-radius: 3px;
+			border: none;
+			cursor: pointer;
+		}
+
+		.main--produtoBox button:hover {
+			background: hsl(206,90%,20%);
+		}
+
+		@media screen and (min-width: 800px) {
+			.main--produtoBox {
+				width: calc(100%/2);
+				float: left;
+			}
+		}
+
+		@media screen and (min-width: 1200px) {
+			.main--produtoBox {
+				width: calc(100%/3);
+			}
+		}
+
+		@media screen and (min-width: 2500px) {
+			.main--containerProdutos {
+				padding-top: 200px;
+			}
+			.main--produtoBox {
+				padding: 50px;
+				height: 72vh;
+				transform: scale(0.9);
+			}
+			.main--produtoBox h1 {
+				font-size: 2vw;
+			}
+			.main--produtoBox p {
+				font-size: 1.5vw;
+			}
+			.main--produtoBox button {
+				font-size: 1vw;
+				height: 100px;
+			}
+		}
+	</style>
+
+
+	<script type="text/javascript">
+		const adiciona_produto = (section, title, text_content, text_button) => {
+			var box_produto, produto_title, produto_content, produto_button;
+
+			box_produto = document.createElement("div");
+			box_produto.classList.add("main--produtoBox");
+
+			produto_title = document.createElement("h1");
+			produto_title.innerText = title;
+
+			produto_content = document.createElement("p");
+			produto_content.innerText = text_content;
+
+			produto_button = document.createElement("button");
+			produto_button.innerText = text_button;
+
+			box_produto.appendChild(produto_title);
+			box_produto.appendChild(produto_content);
+			box_produto.appendChild(produto_button);
+
+			section.appendChild(box_produto);
+		}
+
+		const loremIpsum = `
+			Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean non est odio. Morbi eu ligula sit amet est feugiat consequat. Maecenas et convallis odio, in semper sapien. Morbi tempor, justo eu lobortis pellentesque, leo mi eleifend leo, in laoreet mi sapien non quam. Ut quis diam elementum massa egestas euismod quis a nisl. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Vivamus iaculis, libero a aliquam posuere, eros mauris ullamcorper nisl, vitae ultrices justo justo quis ligula.
+
+			Integer faucibus fermentum lacinia. Etiam iaculis libero vitae imperdiet venenatis. Nunc tempor elit sapien, sed molestie dolor ultricies vitae. Cras leo quam, vehicula vitae velit ut, sagittis egestas lacus. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi fermentum turpis eu lacus facilisis aliquam.
+
+			Nullam eget aliquam tortor, vitae pharetra sapien. Suspendisse at erat eu sapien tincidunt ultrices ac ut nibh. Proin sagittis vehicula odio, id blandit nibh imperdiet sit amet. Ut posuere neque ac purus iaculis, ac scelerisque ante blandit. Sed elementum leo dapibus nunc congue, id egestas sapien hendrerit. Curabitur venenatis ac urna eget lobortis. Suspendisse iaculis orci aliquet dui auctor ornare. Sed mollis lobortis ornare. Phasellus fermentum urna rutrum tortor posuere elementum. Nunc blandit dolor vel magna vulputate, ut mattis nisi eleifend. Proin sapien augue, accumsan sed augue nec, tincidunt mollis urna. Cras pellentesque odio ut risus consequat, sed lacinia elit luctus. Mauris dignissim faucibus est, sit amet varius odio tristique in. In at nulla vestibulum dui tristique gravida ac vel ex.
+
+			Donec id nibh est. Quisque eget eleifend velit. Integer et semper ex, vitae ullamcorper orci. Duis quis tempor nibh. Integer et ante vestibulum, mattis nunc vel, ultricies eros. Donec sed urna sed est egestas commodo. Cras luctus feugiat dolor, eu vestibulum tellus malesuada quis. Donec tempus in est vitae rhoncus. Donec odio est, ornare a cursus et, dictum quis leo. Quisque urna nibh, bibendum at tellus et, posuere vehicula mi. Duis sollicitudin mi sed sem luctus, non tincidunt arcu maximus.
+
+			In vestibulum augue non eros fringilla, id porttitor nulla gravida. Integer eu ultricies nibh. Praesent dapibus sagittis luctus. Fusce mollis eros a tortor iaculis, non dictum nibh molestie. Donec porta risus purus, sed sodales dui efficitur eu. Vivamus iaculis finibus augue, nec semper quam interdum id. Fusce porttitor a tellus a commodo. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam tristique, purus in aliquam dapibus, ipsum quam commodo libero, vel auctor sem nisi euismod odio. Duis arcu leo, elementum sed dictum pretium, porta nec risus.
+
+			Fusce malesuada mi eget convallis blandit. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce nec convallis velit. Quisque lobortis, sem eu dignissim fringilla, nunc ipsum efficitur urna, vitae aliquam arcu metus id purus. Aliquam vestibulum sit amet nulla vitae lobortis. Donec eget nibh nec sapien dictum elementum eget id libero. In volutpat a erat et porttitor. Nam nec est sapien. Aenean ornare sodales efficitur. Quisque cursus urna leo, nec fringilla augue faucibus sit amet. Nulla id hendrerit risus. Curabitur aliquet molestie purus, a commodo nibh commodo finibus. Curabitur eget felis posuere, gravida urna vitae, luctus sem. Sed auctor felis at suscipit commodo. Fusce convallis purus sit amet tempor pharetra.
+
+			Aenean sollicitudin dui a tortor sodales, ac aliquam metus sollicitudin. Cras faucibus at risus sed varius. Aliquam a diam et risus volutpat tincidunt eget at eros. Proin sit amet sodales nibh. Phasellus id bibendum tellus, vel hendrerit ipsum. Fusce laoreet ac mauris ut congue. Suspendisse eu leo non felis gravida condimentum sit amet ac tellus. Proin ultrices augue ut pellentesque tristique. Etiam nisl nulla, vestibulum vitae tincidunt et, accumsan non nibh. Etiam vel massa vel nisl vulputate pretium a nec tortor.
+
+			Sed quis pharetra nibh. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean tristique malesuada aliquet. Ut varius congue erat eget tempor. Suspendisse potenti. Praesent a lacinia dolor. Aliquam dapibus lacinia magna, et tempus ligula sagittis in. Donec semper urna sed leo varius, quis aliquam tellus interdum. Mauris hendrerit ligula enim, nec eleifend erat aliquet luctus. Suspendisse potenti. Vivamus dapibus dui ut eros tincidunt lacinia id non quam. Praesent vulputate fermentum enim, quis malesuada dui convallis vitae.
+		`;
+
+		const section_produtos = document.getElementById("main--containerProdutos");
+
+
+		for (let i=1; i <= 43; i++) {
+			adiciona_produto(section_produtos, `Produto ${i}`, loremIpsum, 'Ver');
+		}
+
+	</script>
+</body>
+</html>

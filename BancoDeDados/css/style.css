@@ -1,0 +1,226 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700;800;900&display=swap');
+
+:root{
+    --primary-color: hsl(230, 61%, 14%);
+}
+
+*{
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body{
+    background-color: hsl(0, 0%, 90%);
+    font-family: 'Poppins';
+}
+
+/* MAIN PAGE */
+#mp{
+    width: 100%;
+    min-height: 100vh;
+}
+
+/* MAIN PAGE HEADER */
+.mp__header{
+    background-color: var(--primary-color);
+    display: flex;
+    flex-flow: column nowrap;
+    align-items: center;
+    color: #fff;
+}
+@media screen and (min-width: 730px) {
+    .mp__header{
+        flex-flow: row nowrap;
+        height: 8rem;
+    }
+}
+
+.mp__header--div-icon{
+    width: 100%;
+    display: grid;
+    place-items: center;
+    margin-top: 2rem;
+    margin-bottom: -2.6rem;
+}
+@media screen and (min-width: 730px) {
+    .mp__header--div-icon{
+        width: auto;
+        margin: 0;
+        margin-left: 1rem;
+    }
+}
+
+.mp__header--icon{
+    height: 6rem;
+    cursor: pointer;
+    transition: 0.2s linear all;
+}
+.mp__header--icon:hover{
+    transform: scale(1.2) rotate(5deg);
+    transition: 0.4s ease all;
+}
+
+.mp__header--div-title{
+    margin-left: 0.6rem;
+    display: inline-block;
+    line-height: 8rem;
+}
+.mp__header--title{
+    font-weight: 700;
+    cursor: default;
+}
+
+.mp__header--div-links{
+    display: none;
+}
+.mp__header--links__ul{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.mp__header--links__item{
+    list-style-type: none;
+    margin-right: 0.8rem;
+}
+.mp__header--links__a{
+    color: inherit;
+    font-weight: 200;
+    text-decoration: none;
+}
+.mp__header--links__a:hover{
+    text-decoration: underline;
+}
+
+@media screen and (min-width: 730px) {
+    .mp__header--div-links{
+        display: block;
+        margin-left: auto;
+    }
+}
+
+/* MAIN PAGE MAIN */
+.mp__main{
+    min-height: 75vh;
+}
+
+.mp__main--section-options{
+    border-radius: 2px;
+    width: 80%;
+    padding: 2rem;
+    background-color: hsl(0, 0%, 85%);
+    color: #fff;
+    margin: 4rem auto 5rem;
+}
+
+@media screen and (min-width: 730px) {
+    .mp__main--section-options{
+        width: 50%;
+        margin: 4rem 0 4rem 5rem;
+    }
+}
+
+.mp__main--options--title{
+    color: hsl(0, 0%, 15%);
+    font-weight: 400;
+    border-bottom: 1.6px solid hsl(0, 0%, 40%);
+    margin-bottom: 2rem;
+}
+.mp__main-options--option{
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    color: inherit;
+    text-align: left;
+    font-weight: 200;
+    width: 80%;
+    height: 4rem;
+    border: none;
+    border-radius: 3px;
+    padding: 1rem;
+    margin: 0 1rem 1rem 0;
+    background-color: var(--primary-color);
+    transition: 0.2s ease all;
+}
+.mp__main-options--option:hover{
+    text-decoration: underline;
+    box-shadow: 0px 0px 28px -4px #000;
+}
+
+.mp__main-options--icon{
+    height: 1.4rem;
+    margin-right: 0.4rem;
+}
+
+/* FORM */
+#form{
+    padding: 1rem;
+    border-radius: 2px;
+    width: 80%;
+    margin: 2rem auto 0;
+    background-color: hsl(0, 0%, 85%);
+}
+
+.form__information{
+    width: 60%;
+    margin: 8px 0;
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+}
+
+.form__information.form__buttons{
+    display: inline-block; 
+    margin-top: 2rem;
+}
+
+.form__button{
+    box-sizing: content-box;
+    margin: 0 10px;
+    padding: 0 2rem;
+    border: 2px outset #fff;
+    border-radius: 8px;
+    cursor: pointer;
+    grid-column: 2;
+    margin-left: auto;
+    height: 2.3rem;
+}
+.form__button:active{
+    border: 2px inset #fff;
+}
+.form__button[type=submit]{
+    border: 2px solid transparent;
+    color: #fff;
+    background-color: var(--primary-color);
+}
+
+/* TABLE */
+.table{
+    color: var(--primary-color);
+    display: grid;
+    gap: 1rem;
+    grid-template-columns: repeat(7, 1fr);
+    font-size: 0.8rem;
+    overflow: auto;
+}
+.table span.table__h{
+    color: #fff;
+    border-radius: 3px;
+    align-self: stretch;
+    padding: 4px 8px 4px;
+    background-color: var(--primary-color);
+    margin-bottom: 1rem;
+    text-align: center;
+}
+.table span{
+    align-self: center;
+}
+
+/* MAIN PAGE FOOTER */
+.mp__footer{
+    height: 4rem;
+    color: white;
+    display: grid;
+    place-items: center;
+    background-color: var(--primary-color);
+}
