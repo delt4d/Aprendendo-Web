@@ -1,6 +1,6 @@
 # MeusProjetosWeb-Aprendizado-
 
-### Sites feitos por mim para aprendizado ou em lições.<br> Muitos não estão completos ou totalmente responsivos. Alguns foram apenas testes.
+### Sites feitos por mim para aprendizado ou como tarefas.<br> Muitos não estão completos ou totalmente responsivos. Alguns foram apenas testes.
   
 ## SITES
 SITE ADVOCACIA
